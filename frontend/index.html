@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Symptom Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Healthcare Symptom Checker</h1>
+            <p class="subtitle">Your Trusted Health Guide</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <label for="symptoms">Describe your symptoms:</label>
+                <textarea id="symptoms" placeholder="e.g., I have a headache and a mild fever..."></textarea>
+                <button id="analyzeBtn">Analyze Symptoms</button>
+                <p id="error-msg" class="error hidden"></p>
+            </section>
+
+            <section id="results" class="results-section hidden">
+                <div class="card">
+                    <h2>Possible Conditions</h2>
+                    <ul id="conditions-list"></ul>
+                </div>
+
+                <div class="card">
+                    <h2>Suggested Next Steps</h2>
+                    <ul id="next-steps-list"></ul>
+                </div>
+
+                <div class="disclaimer-box">
+                    <strong>IMPORTANT DISCLAIMER:</strong>
+                    <p id="disclaimer-text"></p>
+                </div>
+            </section>
+
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing symptoms...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Healthcare Symptom Checker. For educational purposes only.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
