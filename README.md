@@ -10,6 +10,40 @@ A safety-first, AI-powered symptom checker built with FastAPI and Vanilla JS. Th
 - **Clean Architecture**: Modular backend structure using FastAPI.
 - **Simple Frontend**: User-friendly interface for easy interaction.
 
+## Demo
+
+### Input
+![Input Screenshot - User entering symptoms](path/to/input-screenshot.png)
+
+*Replace `path/to/input-screenshot.png` with your actual screenshot showing the symptom input interface*
+
+### Output
+![Output Screenshot - Analysis results](path/to/output-screenshot.png)
+
+*Replace `path/to/output-screenshot.png` with your actual screenshot showing the analysis results*
+
+## Google Gemini Prompt
+
+The application uses **Google Gemini 2.5 Flash** with a carefully crafted system prompt to ensure safe, educational responses:
+
+```
+You are a helpful medical assistant. 
+Based on the provided symptoms, suggest possible conditions and next steps.
+Strictly output JSON with keys: "conditions" (list of strings), "next_steps" (list of strings), "disclaimer" (string).
+The disclaimer must be: "This is for educational purposes only. Consult a doctor for medical advice."
+Do NOT provide a diagnosis. Do NOT provide treatment instructions.
+Ensure the tone is calm, objective, and supportive.
+```
+
+**Example Full Prompt Sent to Gemini:**
+```
+[System Prompt Above]
+
+Symptoms: I have a headache and a mild fever.
+```
+
+The model is configured to return responses in JSON format (`response_mime_type: "application/json"`), ensuring structured and predictable outputs.
+
 ## Project Structure
 
 ```
