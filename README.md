@@ -13,14 +13,10 @@ A safety-first, AI-powered symptom checker built with FastAPI and Vanilla JS. Th
 ## Demo
 
 ### Input
-![Input Screenshot - User entering symptoms](path/to/input-screenshot.png)
-
-*Replace `path/to/input-screenshot.png` with your actual screenshot showing the symptom input interface*
+![Input Screenshot - User entering symptoms](screenshots/input.png)
 
 ### Output
-![Output Screenshot - Analysis results](path/to/output-screenshot.png)
-
-*Replace `path/to/output-screenshot.png` with your actual screenshot showing the analysis results*
+![Output Screenshot - Analysis results](screenshots/output.png)
 
 ## Google Gemini Prompt
 
