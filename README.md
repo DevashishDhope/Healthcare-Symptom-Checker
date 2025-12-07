@@ -13,12 +13,12 @@ A safety-first, AI-powered symptom checker built with FastAPI and Vanilla JS. Th
 ## Demo
 
 ### Input
-![Input Screenshot - User entering symptoms]("C:\Users\devas\OneDrive\Pictures\Screenshots\Screenshot 2025-12-07 193112.png")
+![Input Screenshot - User entering symptoms]"C:\Users\devas\OneDrive\Pictures\Screenshots\Screenshot 2025-12-07 193112.png"
 
 *Replace `path/to/input-screenshot.png` with your actual screenshot showing the symptom input interface*
 
 ### Output
-![Output Screenshot - Analysis results]("C:\Users\devas\OneDrive\Pictures\Screenshots\Screenshot 2025-12-07 193240.png")
+![Output Screenshot - Analysis results]"C:\Users\devas\OneDrive\Pictures\Screenshots\Screenshot 2025-12-07 193240.png"
 
 *Replace `path/to/output-screenshot.png` with your actual screenshot showing the analysis results*
 
