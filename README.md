@@ -20,7 +20,7 @@ A safety-first, AI-powered symptom checker built with FastAPI and Vanilla JS. Th
 
 ## Demo Video
 
-[📹 Watch the full demo video](https://drive.google.com/file/d/1yCmD1jG04qib-SsgLGhJxnnjcBDVyuNd/view?usp=sharing)
+[📹 Watch the full demo video](https://drive.google.com/file/d/1EDWhI9Ms_4WIBzfm-4pJRhC_asEGZMtf/view?usp=sharing)
 
 ## Google Gemini Prompt
 
