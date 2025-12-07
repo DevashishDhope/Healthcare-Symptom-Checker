@@ -1,58 +1,59 @@
 # Video Demonstration Script
 
-**Tone**: Excited, clear, and simple (like talking to a friend).
-**Goal**: Show off the project and explain why you built it this way.
+**Tone**: Professional yet enthusiastic.
+**Goal**: Technical walkthrough showcasing the specific architecture and AI integration.
 
 ---
 
-## 1. Introduction (The "Hook")
-"Hi everyone! Today I want to show you my project: **The Healthcare Symptom Checker.**
+## 1. Introduction
+**"Hi everyone, I'm [Your Name], and this is my submission for the Healthcare Symptom Checker project."**
 
-So, the goal of this assignment was to build a smart tool where you can type in your symptoms, and it tells you what might be wrong and what to do next.
-
-The requirements were to use a **Backend API**, connect it to an **AI model**, and make a nice **Frontend** for users. And guess what? I built exactly that!"
+"The challenge was to build a full-stack application that analyzes medical symptoms using an LLM. My solution focuses on three things: **Real-time AI analysis**, **Privacy-First Architecture**, and **Robust Error Handling**."
 
 ---
 
-## 2. The Demo (Show it working!)
+## 2. The Demo (Unique Use Case)
 *(Action: Open the `index.html` page in your browser)*
 
-"Let me show you how it works. It's super simple.
+"Let's jump straight into a live demo. I want to test it with something specific to show it's not just using simple keywords."
 
-I’ll type in: *'I have a red rash on my arm and it’s really itchy.'*
+*(Action: Type the following)*
+**Input**: *"I have a sudden sharp pain behind my right eye and my vision is blurry."*
 
-I click **Analyze Symptoms**... and boom! Look at that.
+"I click **Analyze Symptoms**... and look at the speed."
 
 *(Action: Point to the results)*
 
-It says it could be **'Contact Dermatitis'** or a **'Fungal Infection'**.
-It also gives me smart advice like **'Avoid scratching'** and **'Keep the area clean'**.
-
-And see this down here? **'Your Trusted Health Guide'**. That’s because it’s powered by **Real AI** (Google Gemini), so it’s actually thinking, not just guessing!"
-
----
-
-## 3. How It Works (The Tech Stuff)
-"Okay, so how does this magic happen?
-
-1.  **The Backend**: I used **FastAPI**. It’s like the brain of the operation. It takes what I type and sends it to the AI.
-2.  **The AI**: I integrated **Google Gemini 2.5**. This is the cool part—it’s a real intelligence engine that understands medical language.
-3.  **The Frontend**: I used simple HTML and JavaScript so it runs fast and looks clean.
-
-I made sure everything focuses on **Safety First**. You’ll see disclaimers everywhere because this is for learning, not for replacing a real doctor."
+"Because we are using the **Google Gemini 2.5 Flash** model, the response is instant.
+It correctly identifies reliable possibilities like **'Cluster Headache'** or **'Acute Glaucoma'**.
+It creates a tailored list of next steps, like seeking immediate care, rather than generic advice."
 
 ---
 
-## 4. The "Secret Sauce" (Why no database?)
-"You might notice I didn't add a database to save history. That was a **smart choice**.
+## 3. Technical Deep Dive (The Backend Architecture)
+"Now, let's look at the code to see how it actually works. I designed the backend using **FastAPI** with a **Clean Architecture** pattern."
 
-I wanted this to be a **Privacy-First** tool. When you talk about health, you want your data to be private. So, I designed it to be 'Stateless'—meaning it helps you in the moment and then forgets, so your secrets stay safe. Plus, it makes the app super lightweight!"
+*(Action: Show VS Code `backend/` folder)*
+
+"Here is the data flow when I clicked that button:
+
+1.  **Request Handling**: The request hits `symptom_routes.py`. It uses a **Pydantic model** to strictly validate the input type, ensuring no bad data gets through.
+2.  **Service Layer**: The controller passes the data to `llm_service.py`. This is where the magic happens.
+3.  **AI Integration**: I construct a secure 'System Prompt' that enforces safety rules (like 'Do not diagnose'). Then, it calls the **Google Gemini API** using a REST transport layer I configured for maximum compatibility.
+4.  **Response Parsing**: The AI's JSON output is parsed back into a Python object and sent to the frontend.
+
+This separation of concerns makes the code testable and scalable."
+
+---
+
+## 4. Design Decision: Privacy-First (No Database)
+"You'll notice I deliberately omitted a database for query history.
+
+"In healthcare, **Data Privacy** is paramount. By designing a **Stateless Architecture**, I ensure that no sensitive personal health information is ever stored on my servers. The data exists only for the duration of the request, minimizing compliance risk."
 
 ---
 
 ## 5. Conclusion
-"So, that’s my Healthcare Symptom Checker!
+"In summary: You have a **Stateless, Safe, and Smart** symptom checker powered by the latest **Gemini 2.5 AI** models.
 
- It’s connected to **Real AI**, it’s **fast**, and it respects your **privacy**.
-
-Thanks for watching!"
+"Thanks for watching!"
