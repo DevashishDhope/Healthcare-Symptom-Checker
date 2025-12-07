@@ -18,6 +18,10 @@ A safety-first, AI-powered symptom checker built with FastAPI and Vanilla JS. Th
 ### Output
 ![Output Screenshot - Analysis results](screenshots/output.png)
 
+## Demo Video
+
+[📹 Watch the full demo video](https://drive.google.com/file/d/1yCmD1jG04qib-SsgLGhJxnnjcBDVyuNd/view?usp=sharing)
+
 ## Google Gemini Prompt
 
 The application uses **Google Gemini 2.5 Flash** with a carefully crafted system prompt to ensure safe, educational responses:
